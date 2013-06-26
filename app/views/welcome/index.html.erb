@@ -1,4 +1,7 @@
 <h1>Listing posts</h1>
+<%= link_to "My Blog", controller: "posts" %>
+<%= link_to 'New post', new_post_path %>
+
  
 <table>
   <tr>
@@ -10,6 +13,8 @@
     <tr>
       <td><%= post.title %></td>
       <td><%= post.text %></td>
+      <td><%= link_to 'Show', post_path %></td>
+      <td><%= link_to 'Edit', edit_post_path(post) %></td>
     </tr>
   <% end %>
 </table>

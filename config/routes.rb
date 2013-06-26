@@ -8,6 +8,8 @@ Tschannes::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
   
+  get 'posts#destroy'
+
   # get  'posts#show'
   # get '/posts' => 'posts#index'
 
