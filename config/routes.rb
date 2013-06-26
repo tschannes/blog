@@ -3,9 +3,16 @@ Tschannes::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   resources :posts
+  resources :welcome
+
   # You can have the root of your site routed with "root"
   root 'welcome#index'
+  
+  # get  'posts#show'
+  # get '/posts' => 'posts#index'
 
+  # post GET /posts/:id(.:format), posts#show
+  # posts GET    /posts(.:format)          posts#index
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -54,6 +61,5 @@ Tschannes::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  post GET    /posts/:id(.:format)      posts#show
-  posts GET    /posts(.:format)          posts#index
+  
 end

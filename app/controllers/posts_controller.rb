@@ -4,10 +4,6 @@ class PostsController < ApplicationController
 		
 	end
 
-	def index
-  	  @posts = Post.all
-	end
-
 	def create
 	  @post = Post.new(params[:post].permit(:title, :text))
 	 
